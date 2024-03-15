@@ -1,0 +1,590 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+  
+<Layout title="Medina Diesel">
+	<script
+  type="text/javascript"
+  src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js">
+import {
+	Carousel,
+	initTWE,
+  } from "tw-elements";
+  
+  initTWE({ Carousel });
+</script>
+	<main>
+		<nav class="bg-slate-200">
+			<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+				<div class="relative flex h-16 items-center justify-between">
+				  <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+					<!-- Mobile menu button-->
+					<button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+					  <span class="absolute -inset-0.5"></span>
+					  <span class="sr-only">Open main menu</span>
+		
+					  <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+					  </svg>
+					  <!--
+						Icon when menu is open.
+			
+						Menu open: "block", Menu closed: "hidden"
+					  -->
+					  <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+					  </svg>
+					</button>
+				  </div>
+
+				  <div class="flex flex-shrink-0 items-center">
+					<img class="h-14 w-auto" src="https://medinadiesel.com.pe/images/Logo1.png" alt="Your Company">
+				  </div>
+				  <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-end">
+					
+					<div class="hidden sm:ml-6 sm:block">
+					  <div class="flex space-x-4">
+						
+						<!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+						<a href="#" class="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" >Locales</a>
+						<a href="#" class="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Servicios</a>
+						<a href="#" class="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Repuestos</a>
+						<a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Blog</a>
+					  </div>
+					</div>
+				  </div>
+				  </div>
+				</div>
+			  </div>
+		</nav>
+		<body>
+			<div class="flex items-center justify-around p-6 bg-slate-200">
+				<div class="w-1/2 p-4">
+					<div>
+						<p class="text-4xl font-mono font-bold"><strong class="text-">Expertos</strong> en reparación de Inyectores Electrónicos y Bombas de Inyección Diésel</p>
+					</div>
+					<div>
+						<p class="text-2xl font-mono py-5 tracking-tight">Con una trayectoria destacada en el sector, ofrecemos soluciones avanzadas para la
+							reparación de inyectores electrónicos y bombas de inyección de diesel, asegurando el máximo rendimiento y eficiencia
+							de tu flota o vehículo.</p>
+					</div>
+							</div>
+				<div class=" w-1/2"><img class="rounded-lg" src="https://medinadiesel.com.pe/images/image_7.jpg" alt=""></div>	
+					
+			</div>
+			<div class="flex content-center justify-around h-28 p-2 m-4 bg-slate-200">
+				<div class="flex items-center justify-center w-24"><img class=" w-20 h-20" src="https://cloudfront-us-east-2.images.arcpublishing.com/reuters/T6U3GCWM5NI7XJX3KJXN5KZ52M.jpg" alt=""></div>
+				<div class="flex items-center justify-center w-40"><img class=" w-32 h-12" src="data:image/png;base64,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" alt=""></div>
+				<div class="flex items-center justify-center w-40"><img class=" w-28 h-12" src="https://static.ferreyros.com.pe/fcsaprdferreyros01/2018/04/logo-cat.jpg" alt=""></div>
+				<div class="flex items-center justify-center w-40"><img class=" w-20 h-20" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Volkswagen_logo_2019.svg/320px-Volkswagen_logo_2019.svg.png" alt=""></div>
+				<div class="flex items-center justify-center w-40"><img class=" w-20 h-20" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/2048px-BMW.svg.png" alt=""></div>
+				<div class="flex items-center justify-center w-40"><img class=" w-20 h-20" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Suzuki_logo_2.svg/2560px-Suzuki_logo_2.svg.png" alt=""></div>
+			</div>
+			<div class="px-20 flex py-4 justify-start content-center bg-black h-14">
+				<div class="flex text-white w-2/3"
+					<p> ¿Tienes más de 2 unidades, o eres empresa?, Visita nuestro canal de empresa -> </p>
+				</div>
+				<div class="w-1/3">
+					<div class="flex justify-end content-center">
+						<button class=" w-20 bg-white rounded-xl">Canal</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="p-20 font-mono text-4xl flex justify-center content-center text-center bg-slate-200" >
+				<p class="w-2/3">Encuentra el centro especializado y oficial más cercano</p>
+			</div>
+
+			<div class="grid grid-cols-3 gap-4 px-28 flex justify-center content-center bg-slate-200">
+				<div class="flex justify-center content-center rounded-xl bg-white">
+					<div class="justify-center p-4">
+						<div class="justify-center rounded-xl pb-3"><img class="object-cover" src="https://www.ipesa.com.pe/blog/wp-content/uploads/2022/12/maquinaria-pesada-1.jpg" alt=""></div>
+						
+						<div class="rounded-xl flex">
+							<div class="w-auto flex items-center justify-center p-2">
+								<i class="fa-regular fa-2x fa-map"></i>
+							</div>
+							<div class="content-center">
+								<p class="text-sm font-mono flex content-center">
+									Av. Honorio Delgado N°320 <br>
+								Urb. Semirústica, El Bosque, Trujillo
+								</p>
+							</div>
+						</div>
+						<div class="rounded-xl flex">
+							<div class="w-auto flex items-center justify-center p-2">
+								<i class="fa-solid fa-2x fa-phone"></i>
+							</div>
+							<div class="flex items-center">
+								<p class="text-sm font-mono">
+								914817239
+								</p>
+							</div>
+						</div>
+						<div class="rounded-xl flex">
+							<div class="w-auto flex items-center justify-center p-2">
+								<i class="fa-solid fa-2x fa-phone"></i>
+							</div>
+							<div class="flex items-center">
+								<p class="text-sm font-mono ">
+								Tienda de Repuestos y Laboratorio Diesel
+								</p>
+							</div>
+						</div>
+						
+						<div class="flex justify-center">
+							<div class="flex justify-center w-1/2 py-2"><button class="w-2/3 px-2 border-black rounded-xl border-2 border-solid">Llamar</button></div>
+							<div class="flex justify-center w-1/2 py-2"><button class="w-2/3 px-2 border-black rounded-xl border-2 border-solid">Mapa</button></div>
+						</div>
+					</div>
+				</div>
+				<div class="flex justify-center content-center rounded-xl bg-white">
+					<div class="justify-center p-4">
+						<div class="justify-center rounded-xl pb-3"><img class="object-cover" src="https://www.ipesa.com.pe/blog/wp-content/uploads/2022/12/maquinaria-pesada-1.jpg" alt=""></div>
+						<div class="rounded-xl flex">
+							<div class="w-auto flex items-center justify-center p-2">
+								<i class="fa-regular fa-2x fa-map"></i>
+							</div>
+							<div class="content-center">
+								<p class="text-sm font-mono flex content-center">
+									Av. Honorio Delgado N°320 <br>
+								Urb. Semirústica, El Bosque, Trujillo
+								</p>
+							</div>
+						</div>
+						<div class="rounded-xl flex">
+							<div class="w-auto flex items-center justify-center p-2">
+								<i class="fa-solid fa-2x fa-phone"></i>
+							</div>
+							<div class="flex items-center">
+								<p class="text-sm font-mono">
+								914817239
+								</p>
+							</div>
+						</div>
+						<div class="rounded-xl flex">
+							<div class="w-auto flex items-center justify-center p-2">
+								<i class="fa-solid fa-2x fa-phone"></i>
+							</div>
+							<div class="flex items-center">
+								<p class="text-sm font-mono ">
+								Tienda de Repuestos y Laboratorio Diesel
+								</p>
+							</div>
+						</div>
+						
+						<div class="flex justify-center">
+							<div class="flex justify-center w-1/2 py-2"><button class="w-2/3 px-2 border-black rounded-xl border-2 border-solid">Llamar</button></div>
+							<div class="flex justify-center w-1/2 py-2"><button class="w-2/3 px-2 border-black rounded-xl border-2 border-solid">Mapa</button></div>
+						</div>
+					</div>
+				</div>
+				<div class="flex justify-center content-center rounded-xl bg-white">
+					<div class="justify-center p-4">
+						<div class="justify-center rounded-xl pb-3"><img class="object-cover" src="https://www.ipesa.com.pe/blog/wp-content/uploads/2022/12/maquinaria-pesada-1.jpg" alt=""></div>
+						<div class="rounded-xl flex">
+							<div class="w-auto flex items-center justify-center p-2">
+								<i class="fa-regular fa-2x fa-map"></i>
+							</div>
+							<div class="content-center">
+								<p class="text-sm font-mono flex content-center">
+									Av. Honorio Delgado N°320 <br>
+								Urb. Semirústica, El Bosque, Trujillo
+								</p>
+							</div>
+						</div>
+						<div class="rounded-xl flex">
+							<div class="w-auto flex items-center justify-center p-2">
+								<i class="fa-solid fa-2x fa-phone"></i>
+							</div>
+							<div class="flex items-center">
+								<p class="text-sm font-mono">
+								914817239
+								</p>
+							</div>
+						</div>
+						<div class="rounded-xl flex">
+							<div class="w-auto flex items-center justify-center p-2">
+								<i class="fa-solid fa-2x fa-phone"></i>
+							</div>
+							<div class="flex items-center">
+								<p class="text-sm font-mono ">
+								Tienda de Repuestos y Laboratorio Diesel
+								</p>
+							</div>
+						</div>
+						
+						<div class="flex justify-center">
+							<div class="flex justify-center w-1/2 py-2"><button class="w-2/3 px-2 border-black rounded-xl border-2 border-solid">Llamar</button></div>
+							<div class="flex justify-center w-1/2 py-2"><button class="w-2/3 px-2 border-black rounded-xl border-2 border-solid">Mapa</button></div>
+						</div>
+					</div>
+				</div>
+				<div class="flex justify-center content-center rounded-xl bg-white">
+					<div class="justify-center p-4">
+						<div class="justify-center rounded-xl pb-3"><img class="object-cover" src="https://www.ipesa.com.pe/blog/wp-content/uploads/2022/12/maquinaria-pesada-1.jpg" alt=""></div>
+						<div class="rounded-xl flex">
+							<div class="w-auto flex items-center justify-center p-2">
+								<i class="fa-regular fa-2x fa-map"></i>
+							</div>
+							<div class="content-center">
+								<p class="text-sm font-mono flex content-center">
+									Av. Honorio Delgado N°320 <br>
+								Urb. Semirústica, El Bosque, Trujillo
+								</p>
+							</div>
+						</div>
+						<div class="rounded-xl flex">
+							<div class="w-auto flex items-center justify-center p-2">
+								<i class="fa-solid fa-2x fa-phone"></i>
+							</div>
+							<div class="flex items-center">
+								<p class="text-sm font-mono">
+								914817239
+								</p>
+							</div>
+						</div>
+						<div class="rounded-xl flex">
+							<div class="w-auto flex items-center justify-center p-2">
+								<i class="fa-solid fa-2x fa-phone"></i>
+							</div>
+							<div class="flex items-center">
+								<p class="text-sm font-mono ">
+								Tienda de Repuestos y Laboratorio Diesel
+								</p>
+							</div>
+						</div>
+						
+						<div class="flex justify-center">
+							<div class="flex justify-center w-1/2 py-2"><button class="w-2/3 px-2 border-black rounded-xl border-2 border-solid">Llamar</button></div>
+							<div class="flex justify-center w-1/2 py-2"><button class="w-2/3 px-2 border-black rounded-xl border-2 border-solid">Mapa</button></div>
+						</div>
+					</div>
+				</div>
+				<div class="flex justify-center content-center rounded-xl bg-white">
+					<div class="justify-center p-4">
+						<div class="justify-center rounded-xl pb-3 "><img class="object-cover" src="https://www.ipesa.com.pe/blog/wp-content/uploads/2022/12/maquinaria-pesada-1.jpg" alt=""></div>
+						<div class="rounded-xl flex">
+							<div class="w-auto flex items-center justify-center p-2">
+								<i class="fa-regular fa-2x fa-map"></i>
+							</div>
+							<div class="content-center">
+								<p class="text-sm font-mono flex content-center">
+									Av. Honorio Delgado N°320 <br>
+								Urb. Semirústica, El Bosque, Trujillo
+								</p>
+							</div>
+						</div>
+						<div class="rounded-xl flex">
+							<div class="w-auto flex items-center justify-center p-2">
+								<i class="fa-solid fa-2x fa-phone"></i>
+							</div>
+							<div class="flex items-center">
+								<p class="text-sm font-mono">
+								914817239
+								</p>
+							</div>
+						</div>
+						<div class="rounded-xl flex">
+							<div class="w-auto flex items-center justify-center p-2">
+								<i class="fa-solid fa-2x fa-phone"></i>
+							</div>
+							<div class="flex items-center">
+								<p class="text-sm font-mono ">
+								Tienda de Repuestos y Laboratorio Diesel
+								</p>
+							</div>
+						</div>
+
+						<div class="flex justify-center">
+							<div class="flex justify-center w-1/2 py-2"><button class="w-2/3 px-2 border-black rounded-xl border-2 border-solid">Llamar</button></div>
+							<div class="flex justify-center w-1/2 py-2"><button class="w-2/3 px-2 border-black rounded-xl border-2 border-solid">Mapa</button></div>
+						</div>
+					</div>
+				</div>
+				<div class="flex justify-center content-center rounded-xl bg-white">
+					<div class="justify-center p-4">
+						<div class="justify-center rounded-xl pb-3"><img class="object-cover" src="https://www.ipesa.com.pe/blog/wp-content/uploads/2022/12/maquinaria-pesada-1.jpg" alt=""></div>
+						<div class="rounded-xl flex">
+							<div class="w-auto flex items-center justify-center p-2">
+								<i class="fa-regular fa-2x fa-map"></i>
+							</div>
+							<div class="content-center">
+								<p class="text-sm font-mono flex content-center">
+									Av. Honorio Delgado N°320 <br>
+								Urb. Semirústica, El Bosque, Trujillo
+								</p>
+							</div>
+						</div>
+						<div class="rounded-xl flex">
+							<div class="w-auto flex items-center justify-center p-2">
+								<i class="fa-solid fa-2x fa-phone"></i>
+							</div>
+							<div class="flex items-center">
+								<p class="text-sm font-mono">
+								914817239
+								</p>
+							</div>
+						</div>
+						<div class="rounded-xl flex">
+							<div class="w-auto flex items-center justify-center p-2">
+								<i class="fa-solid fa-2x fa-phone"></i>
+							</div>
+							<div class="flex items-center">
+								<p class="text-sm font-mono ">
+								Tienda de Repuestos y Laboratorio Diesel
+								</p>
+							</div>
+						</div>
+						
+						<div class="flex justify-center">
+							<div class="flex justify-center w-1/2 py-2"><button class="w-2/3 px-2 border-black rounded-xl border-2 border-solid">Llamar</button></div>
+							<div class="flex justify-center w-1/2 py-2"><button class="w-2/3 px-2 border-black rounded-xl border-2 border-solid">Mapa</button></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pt-14 pb-5">
+				<div class="flex justify-center content-center">
+					<p class="text-4xl font-mono w-1/2 text-center">El repuesto que estas buscando en un solo lugar</p>
+				</div>
+				<div class="grid grid-cols-4 gap-4 py-5 px-28 flex justify-center content-center bg-slate-200">
+					<div class="bg-white rounded-xl p-4">
+						<div class="flex justify-center">
+							<i class="fa-solid fa-4x fa-engine"></i>
+						</div>
+						<div class="flex justify-center pt-4">
+							<p class="text-sm font-mono">Turbos</p>
+						</div>
+					</div>
+					<div class="bg-white rounded-xl p-4">
+						<div class="flex justify-center">
+							<i class="fa-solid fa-4x fa-tank-water"></i>
+						</div>
+						<div class="flex justify-center pt-4">
+							<p class="text-sm font-mono">Toberas</p>
+						</div>
+					</div>
+					<div class="bg-white rounded-xl p-4">
+						<div class="flex justify-center">
+							<i class="fa-solid fa-4x fa-oil-can"></i>
+						</div>
+						<div class="flex justify-center pt-4">
+							<p class="text-sm font-mono">Filtros</p>
+						</div>
+					</div>
+					<div class="bg-white rounded-xl p-4">
+						<div class="flex justify-center">
+							<i class="fa-solid fa-4x fa-gas-pump"></i>
+						</div>
+						<div class="flex justify-center p-4">
+							<p class="text-sm font-mono">Bombas</p>
+						</div>
+					</div>
+					<div class="bg-white rounded-xl p-4">
+						<div class="flex justify-center">
+							<i class="fa-solid fa-4x fa-pipe-valve"></i>
+						</div>
+						<div class="flex justify-center p-4">
+							<p class="text-sm font-mono">Válvulas</p>
+						</div>
+					</div>
+					<div class="bg-white rounded-xl p-4">
+						<div class="flex justify-center">
+							<i class="fa-solid fa-4x fa-tire"></i>
+						</div>
+						<div class="flex justify-center p-4">
+							<p class="text-sm font-mono">Cabezales</p>
+						</div>
+					</div>
+					<div class="bg-white rounded-xl p-4">
+						<div class="flex justify-center">
+							<i class="fa-solid fa-4x fa-oil-temperature"></i>
+						</div>
+						<div class="flex justify-center p-4">
+							<p class="text-sm font-mono">Actuadores</p>
+						</div>
+					</div>
+					<div class="bg-white rounded-xl p-4">
+						<div class="flex justify-center">
+							<i class="fa-sharp fa-4x fa-solid fa-oil-well"></i>
+						</div>
+						<div class="flex justify-center p-4">
+							<p class="text-sm font-mono">Elementos</p>
+						</div>
+					</div>
+					<div class="bg-white rounded-xl p-4">
+						<div class="flex justify-center">
+							<i class="fa-solid fa-4x fa-bottle-droplet"></i>
+						</div>
+						<div class="flex justify-center p-4">
+							<p class="text-sm font-mono">Inyectores</p>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="pt-14 pb-5">
+				<div class="flex justify-center content-center">
+					<p class="text-4xl font-mono w-1/2 text-center">Nuestros servicios</p>
+				</div>
+				<div class="grid grid-cols-2 gap-5 py-5 px-28 flex justify-center content-center bg-slate-200">
+					<div class="bg-black rounded-xl p-4 text-white">
+						<div class="grid grid-rows-2 grid-flow-col gap-1 " >
+							<div class="row-span-1 col-span-4">
+								<p class="text-2xl font-mono">
+									Servicio 1
+								</p>
+							</div>
+							<div class="col-span-4 ">
+								<p class="text-xl font-mono">
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								</p>
+							</div>
+							<div class=" flex items-center row-span-2 col-span-1 ">
+								<i class="fa-solid fa-4x fa-chevron-right"></i>
+							</div>
+						</div>
+					</div>
+					<div class="bg-black rounded-xl p-4 text-white">
+						<div class="grid grid-rows-2 grid-flow-col gap-1" >
+							<div class="row-span-1 col-span-4 ">
+								<p class="text-2xl font-mono">
+									Servicio 2
+								</p>
+							</div>
+							<div class="col-span-4 ">
+								<p class="text-xl font-mono">
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								</p>
+							</div>
+							<div class="flex items-center row-span-2 col-span-1 ">
+								<i class="fa-solid fa-4x fa-chevron-right"></i>
+							</div>
+						</div>
+					</div>
+					<div class="bg-black rounded-xl p-4 text-white">
+						<div class="grid grid-rows-2 grid-flow-col gap-1" >
+							<div class="row-span-1 col-span-4 ">
+								<p class="text-2xl font-mono">
+									Servicio 3
+								</p>
+							</div>
+							<div class="col-span-4 ">
+								<p class="text-xl font-mono">
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								</p>
+							</div>
+							<div class="flex items-center row-span-2 col-span-1 ">
+								<i class="fa-solid fa-4x fa-chevron-right"></i>
+							</div>
+						</div>
+					</div>
+					<div class="bg-black rounded-xl p-4 text-white">
+						<div class="grid grid-rows-2 grid-flow-col gap-1" >
+							<div class="row-span-1 col-span-4 ">
+								<p class="text-2xl font-mono">
+									Servicio 4
+								</p>
+							</div>
+							<div class="col-span-4 ">
+								<p class="text-xl font-mono">
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								</p>
+							</div>
+							<div class=" flex items-center row-span-2 col-span-1 ">
+								<i class="fa-solid fa-4x fa-chevron-right"></i>
+							</div>
+						</div>
+					</div>
+					<div class="bg-black rounded-xl p-4 text-white">
+						<div class="grid grid-rows-2 grid-flow-col gap-1" >
+							<div class="row-span-1 col-span-4 ">
+								<p class="text-2xl font-mono">
+									Servicio 5
+								</p>
+							</div>
+							<div class="col-span-4 ">
+								<p class="text-xl font-mono">
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								</p>
+							</div>
+							<div class=" flex items-center row-span-2 col-span-1 ">
+								<i class="fa-solid fa-4x fa-chevron-right"></i>
+							</div>
+						</div>
+					</div>
+					<div class="bg-black rounded-xl p-4 text-white">
+						<div class="grid grid-rows-2 grid-flow-col gap-1" >
+							<div class="row-span-1 col-span-4 ">
+								<p class="text-2xl font-mono">
+									Servicio 6
+								</p>
+							</div>
+							<div class="col-span-4 ">
+								<p class="text-xl font-mono">
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								</p>
+							</div>
+							<div class=" flex items-center row-span-2 col-span-1 ">
+								<i class="fa-solid fa-4x fa-chevron-right"></i>
+							</div>
+						</div>
+					</div>			
+				</div>
+
+			</div>
+			<div class="pt-14 pb-5 px-20">
+				<div class="flex justify-center content-center">
+					<p class="text-4xl font-mono text-center">Agenda una revisión en nuestro laboratorio</p>
+				</div>
+				<div >
+					<div class="flex min-h-full flex-col justify-center px-6 py-6 lg:px-8 ">
+						<div class="mt-10 sm:mx-auto sm:w-full sm:max-w-1/2-sm bg-white rounded-xl flex">
+							<div class="w-1/2 rounded-xl">
+								<img class="flex rounded-xl object-fill" src="https://www.shutterstock.com/image-photo/mature-latin-manager-mentor-talking-600nw-2322560109.jpg" alt="">
+							</div>
+							<div class="w-1/2 px-5 pt-5">
+								<form class="space-y-6" action="#" method="POST">
+									<div>
+										<label for="name" class="block text-sm font-medium leading-6 text-gray-900">Nombre</label>
+										<div class="mt-2">
+										  <input id="name" name="name" type="text" autocomplete="name" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+										</div>
+									  </div>
+									<div>
+									  <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Correo</label>
+									  <div class="mt-2">
+										<input id="email" name="email" type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+									  </div>
+									</div>
+							  
+									<div>
+									  <div class="flex items-center justify-between">
+										<label for="celular" class="block text-sm font-medium leading-6 text-gray-900">Celular</label>
+									  </div>
+									  <div class="mt-2">
+										<input id="celular" name="celular" type="text" autocomplete="celular" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+									  </div>
+									</div>
+							  
+									<div>
+									  <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Registrarse</button>
+									  <p class="text-center text-sm text-gray-500">
+										<a href="#" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Válido durante 15:00</a>
+									  </p>
+									</div>
+								  </form>
+							</div>
+						  
+						  
+						</div>
+					  </div>
+				</div>
+			</div>
+		</body>
+	</main>
+</Layout>
+
+

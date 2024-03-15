@@ -1,0 +1,45 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="https://acelera.b-cdn.net/fa/css/all.min.css">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-slate-200">
+		<slot />
+		
+	</body>
+	<footer class="p-5">
+		<div class="flex justify-center bg-teal-500 rounded-xl">
+			<div class="px-5 py-5">
+				<i class="fa-brands fa-2x fa-facebook" style="color: #ffffff;"></i>
+			</div>
+			<div class="px-5 py-5">
+				<i class="fa-brands fa-2x fa-instagram" style="color: #ffffff;"></i>
+			</div>
+			<div class="px-5 py-5">
+				<i class="fa-brands fa-2x fa-linkedin" style="color: #ffffff;"></i>
+			</div>
+			<div class="px-5 py-5">
+				<i class="fa-brands fa-2x fa-tiktok" style="color: #ffffff;"></i>
+			</div>
+			<div class="px-5 py-5">
+				<i class="fa-brands fa-2x fa-youtube" style="color: #ffffff;"></i>
+			</div>
+			<div class="px-5 py-5">
+				<i class="fa-brands fa-2x fa-whatsapp" style="color: #ffffff;"></i>
+			</div>
+		</div>
+	</footer>
+</html>
